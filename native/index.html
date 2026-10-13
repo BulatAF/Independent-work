@@ -1,30 +1,48 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
     <head>
+        <meta charset="UTF-8">
         <title>Форма авторизации</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="index.js" defer></script>
     </head>
     <body>
         <header>
-            <h1>Header</h1>
+            <h1>Добро пожаловать в SpiceX!</h1>
         </header>
-        <div>
-            <div>
-                <form action="/action_page.php" method="get">
-                    <b>Sign in</b>
-                    <button>Continue with Google</button>
-                    <button>Continue with Apple</button>
-                    or
-                    <input type="email">
-                    <input type="password">
+
+        <main class="main">
+            <div class="card outline">
+                <form>
+                    <h2>Sign in</h2>
+
+                    <button type="button" onclick="onMainClick()">Continue with Google</button>
+                    <button type="button">Continue with Apple</button>
+
+                    <p>or</p>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required>
+
+                    <label for="password">Пароль</label>
+                    <input id="password" name="password" type="password" autocomplete="current-password" required>
+
                     <a href="#">Forgot password?</a>
-                    <input type="checkbox"><label>Keep me logged in?</label>    
+                    
+                    <div>
+                        <input id="keep" name="keep" type="checkbox">
+                        <label for="keep">Keep me logged in?</label>
+                    </div>
+                    
+
                     <button type="submit">Sign in</button>
                     <button type="reset">Reset</button>
+
+                    <p>New to LinkedIn? <a href="">Join now</a></p>
                 </form>
             </div>
-            <div>
-                <p>New to LinkedIn? <a href="">Join now</a> </p>
-            </div> 
-        </div>
+        </main>
+
         <footer>
             <p>&copy; 2026 BulatAF</p>
             <div><a href="https://vk.ru/boolaton">ВКонтакте</a></div>
