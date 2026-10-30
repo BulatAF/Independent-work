@@ -2,50 +2,52 @@
 <html lang="ru">
     <head>
         <title>SpiceX</title>
-        <!--<link rel="stylesheet" href="./styles.css" /> -->
+        <link rel="stylesheet" href="./styles.css" />
         <!--<script src="index.js" defer></script>-->
     </head>
     <body>
+        
         <header>
-            <h1>Привет! &#x1F600;</h1> 
+            <h1><span class="pepper">🌶️</span>   Привет!   <span class="pepper">🌶️</span></h1> 
         </header>
 
-        <main>
-            <div>
+        <main class = "main">
+            <div class = "form">       
                 <form>
                     <h2>Sign in</h2>
 
-                    <button type="button">Continue with Google</button>
-                    <button type="button">Continue with Apple</button>
+                    <div>
+                          <button type="button">Continue with Google</button>
+                    </div>
+                    <div><button type="button">Continue with Apple</button></div>
 
-                    <p>or</p>
+                    <p id = "central_or">or</p>
 
                     <div>
-                        <label for="email">Email</label>
-                        <input id="email" name="email" type="email">
+                        <input id="email" name="email" type="email" placeholder="Email">
                     </div>
                     
                     <div>
-                        <label for="password">Пароль</label>
-                        <input id="password" name="password" type="password">
+                        <input id="password" name="password" type="password" placeholder="Password">
                     </div>
                     <a href="https://www.youtube.com/watch?v=BL8ZKeGCaIg">Forgot password?</a>
                     
                     <div>
                         <input id="keep" name="keep" type="checkbox">
-                        <label for="keep">Keep me logged in?</label>
+                        <label for="keep" class = "keep">Keep me logged in?</label>
                     </div>
                     
                     <p id="form-status" role="status"></p>
                     <button type="submit">Sign in</button>
-                    <button type="reset">Reset</button>
-
-                    <p>New to SpiceX? <a href="">Join now</a></p>
                 </form>
+                
             </div>
+
+            
         </main>
 
         <footer>
+            <p>New to SpiceX? <a href="">Join now</a></p>
             <p>&copy; 2026 BulatAF</p>
             <div><a href="https://vk.ru/boolaton">ВКонтакте</a></div>
             <div><p>Почта: buardurdyev@hse.edu.ru</p></div>

@@ -1,214 +1,162 @@
-body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(154, 154, 234);
-    color: #222;
-    font-family: Arial, sans-serif;
-    line-height: 1.4;
-}
-
 header {
     text-align: center;
-    padding: 24px 16px 0;
 }
 
-h1 {
-    margin: 0;
-    font-size: 1.75rem;
-    font-style: italic;
-}
+body {
+    background-color: rgb(230, 186, 122);
 
-h2 {
-    margin: 0 0 4px;
-    font-size: 1.5rem;
-}
-
-p {
-    margin: 0;
-}
-
-label {
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
-label[for="keep"] {
-    font-weight: normal;
-    cursor: pointer;
 }
 
 .main {
-    flex: 1;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    box-sizing: border-box;
-    max-width: 360px;
-    padding: 24px;
-    background-color: #fff;
-    animation: appear 0.5s ease-out;
-}
 
-.outline {
-    border: 1px solid #897f7f;
-    border-radius: 12px;
-}
-
-.card form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.card form p {
+footer {
     text-align: center;
 }
 
-input {
-    padding: 12px 14px;
-    border: 1px solid #888;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.2s;
+h1 {
+    color: rgb(255, 55, 0);
+    font-style: italic;
 }
 
-input:focus {
-    border-color: #4b3fd6;
-    outline: 2px solid #4b3fd6;
-    outline-offset: 1px;
+h2{
+    color: rgb(255, 55, 0);
+    font-style: bold;
 }
 
-input:user-invalid {
-    border-color: #c62828;
+p{
+    color: rgb(255, 55, 0);
+    font-style: bold;
 }
 
-input[type="checkbox"] {
-    padding: 0;
-    accent-color: #4b3fd6;
+a{
+    color: rgb(133, 29, 0);
+    font-style: bold;
 }
 
-#keep {
-    width: 18px;
-    height: 18px;
-    margin: 0 8px 0 0;
-    vertical-align: middle;
-    cursor: pointer;
+.form{
+    animation: fly 1s ease-out;
+
+    outline-color: rgb(133, 29, 0);
+    outline-style: solid;
+    outline-width: medium;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: rgb(245, 179, 138);
 }
 
-button {
-    padding: 12px 14px;
-    border: 1px solid #888;
-    border-radius: 8px;
-    background-color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
+.keep{
+    color: rgb(133, 29, 0);
+    font-style: italic;
+}
+
+button{
+    width: 100%;
+    outline-color: rgb(132, 80, 66);
+    outline-style: solid;
+    border-radius: 5px;
+    padding: 3px;
+    margin-bottom: 10px;
+    background-color: rgb(244, 203, 178);
+    color: rgb(128, 29, 1);
+    transition: 1.5s;
 }
 
 button:hover {
-    background-color: #eee;
+    background-color: rgb(252, 77, 24);
 }
 
 button:active {
-    transform: scale(0.98);
+    background-color: orange;
 }
 
-button[type="submit"] {
-    background-color: #4b3fd6;
-    border-color: #4b3fd6;
-    color: #fff;
+input[type="email"] {
+    background-color: rgb(255, 240, 220);
 }
 
-button[type="submit"]:hover {
-    background-color: #3a2fb0;
+input[type="password"] {
+    background-color: rgb(255, 240, 220);
 }
 
-a {
-    color: #4b3fd6;
-    text-underline-offset: 3px;
+input:not([type="checkbox"]) {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
 }
 
-footer {
-    padding: 16px;
-    text-align: center;
-    line-height: 1.6;
+input:invalid {
+    border: 3px solid rgb(247, 68, 68);
+    background-color: rgb(248, 155, 155);
 }
 
-footer a {
-    color: inherit;
+input:focus {
+    outline: 2px solid orange;
 }
 
-@keyframes appear {
+
+#central_or{
+     text-align: center;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateX(1000px) rotate(0deg);
+    }
+    100% {
+        transform: translateX(0px) rotate(-1080deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .form {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .form {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 901px) {
+    .form {
+        width: 170px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+}
+
+.pepper {
+    display: inline-block;
+    font-size: 30px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
     from {
-        opacity: 0;
-        transform: translateY(16px);
+        transform: rotate(0deg);
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        transform: rotate(360deg);
     }
-}
-
-@media (max-width: 480px) {
-    .main {
-        padding: 8px;
-    }
-
-    .card {
-        padding: 16px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .card {
-        padding: 32px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card {
-        animation: none;
-    }
-
-    input,
-    button {
-        transition: none;
-    }
-}
-
-input[aria-invalid="true"] {
-    border-color: #c62828;
-}
-
-.card form .error {
-    font-size: 0.85rem;
-    color: #c62828;
-    text-align: left;
-}
-
-.card form .success {
-    color: #1b5e20;
-    font-weight: bold;
-}
-
-.card form .fail {
-    color: #c62828;
-    font-weight: bold;
 }
