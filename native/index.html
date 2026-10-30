@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <meta charset="UTF-8">
-        <title>Форма авторизации</title>
-        <link rel="stylesheet" href="./styles.css" />
-        <script src="index.js" defer></script>
+        <title>SpiceX</title>
+        <!--<link rel="stylesheet" href="./styles.css" /> -->
+        <!--<script src="index.js" defer></script>-->
     </head>
     <body>
         <header>
-            <h1>Добро пожаловать в SpiceX!</h1>
+            <h1>Привет! &#x1F600;</h1> 
         </header>
 
-        <main class="main">
-            <div class="card outline">
+        <main>
+            <div>
                 <form>
                     <h2>Sign in</h2>
 
-                    <button type="button" onclick="onMainClick()">Continue with Google</button>
+                    <button type="button">Continue with Google</button>
                     <button type="button">Continue with Apple</button>
 
                     <p>or</p>
 
-                    <label for="email">Email</label>
-                    <input id="email" name="email" type="email" autocomplete="email" required>
-
-                    <label for="password">Пароль</label>
-                    <input id="password" name="password" type="password" autocomplete="current-password" required>
-
-                    <a href="#">Forgot password?</a>
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email">
+                    </div>
+                    
+                    <div>
+                        <label for="password">Пароль</label>
+                        <input id="password" name="password" type="password">
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=BL8ZKeGCaIg">Forgot password?</a>
                     
                     <div>
                         <input id="keep" name="keep" type="checkbox">
                         <label for="keep">Keep me logged in?</label>
                     </div>
                     
-
+                    <p id="form-status" role="status"></p>
                     <button type="submit">Sign in</button>
                     <button type="reset">Reset</button>
 
-                    <p>New to LinkedIn? <a href="">Join now</a></p>
+                    <p>New to SpiceX? <a href="">Join now</a></p>
                 </form>
             </div>
         </main>
