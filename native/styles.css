@@ -160,3 +160,36 @@ input:focus {
         transform: rotate(360deg);
     }
 }
+
+
+
+#gif-effect {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#gif-effect.show {
+  display: flex;
+}
+
+#gif-effect img {
+  animation: appear 3s linear forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0);
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(2);
+    filter: hue-rotate(-250deg) saturate(3);
+  }
+}
