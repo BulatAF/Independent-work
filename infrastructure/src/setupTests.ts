@@ -1,7 +1,10 @@
-import '@testing-library/jest-dom/vitest';
-import { cleanup } from '@testing-library/react';
-import { afterEach } from 'vitest';
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vitest/config';
 
-afterEach(() => {
-  cleanup();
+export default defineConfig({
+  plugins: [react()],
+  test: {
+    environment: 'jsdom',
+    setupFiles: './src/setupTests.ts',
+  },
 });
