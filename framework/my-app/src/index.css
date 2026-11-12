@@ -73,15 +73,15 @@ button:active {
   background-color: orange;
 }
 
-input[type='email'] {
+input[type="email"] {
   background-color: rgb(255, 240, 220);
 }
 
-input[type='password'] {
+input[type="password"] {
   background-color: rgb(255, 240, 220);
 }
 
-input:not([type='checkbox']) {
+input:not([type="checkbox"]) {
   width: 100%;
   box-sizing: border-box;
   display: block;

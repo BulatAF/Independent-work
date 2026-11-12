@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import type { FormEvent } from 'react';
-import { useAuthStore } from '../store/authStore';
-import { Button } from './Button';
-import { Checkbox } from './Checkbox';
-import { TextInput } from './TextInput';
+import { useState } from "react";
+import type { FormEvent } from "react";
+import { useAuthStore } from "../store/authStore";
+import { Button } from "./Button";
+import { Checkbox } from "./Checkbox";
+import { TextInput } from "./TextInput";
 
 export function SignIn() {
   const email = useAuthStore((state) => state.email);
@@ -52,7 +52,9 @@ export function SignIn() {
             onChange={(event) => setPassword(event.target.value)}
           />
 
-          <a href="https://www.youtube.com/watch?v=BL8ZKeGCaIg">Forgot password?</a>
+          <a href="https://www.youtube.com/watch?v=BL8ZKeGCaIg">
+            Forgot password?
+          </a>
 
           <Checkbox
             id="keep"

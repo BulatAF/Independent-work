@@ -1,5 +1,5 @@
-import type { InputHTMLAttributes } from 'react';
-import type { ReactNode } from 'react';
+import type { InputHTMLAttributes } from "react";
+import type { ReactNode } from "react";
 
 type CheckboxProps = InputHTMLAttributes<HTMLInputElement> & {
   children: ReactNode;

@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import { useAuthStore } from '../store/authStore';
+import { useEffect, useRef } from "react";
+import { useAuthStore } from "../store/authStore";
 
 export function ElonMask() {
   const loggedIn = useAuthStore((state) => state.loggedIn);
@@ -14,7 +14,7 @@ export function ElonMask() {
   }, [loggedIn]);
 
   return (
-    <div id="gif-effect" className={loggedIn ? 'show' : ''}>
+    <div id="gif-effect" className={loggedIn ? "show" : ""}>
       <img src="/assets/animations/elon-musk.gif" alt="Анимация" />
       <audio ref={audioRef} src="/assets/sounds/snoopDog.mp3" />
     </div>
